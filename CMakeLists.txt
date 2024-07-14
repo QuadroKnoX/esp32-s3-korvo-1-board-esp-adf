@@ -12,3 +12,6 @@ set(COMPONENT_SRCS
 endif()
 
 register_component()
+
+idf_component_get_property(audio_board_lib audio_board COMPONENT_LIB)
+set_property(TARGET ${audio_board_lib} APPEND PROPERTY INTERFACE_LINK_LIBRARIES ${COMPONENT_LIB})
