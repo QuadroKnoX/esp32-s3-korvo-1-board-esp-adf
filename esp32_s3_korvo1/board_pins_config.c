@@ -79,11 +79,11 @@ esp_err_t get_spi_pins(spi_bus_config_t *spi_config, spi_device_interface_config
     AUDIO_NULL_CHECK(TAG, spi_config, return ESP_FAIL);
     AUDIO_NULL_CHECK(TAG, spi_device_interface_config, return ESP_FAIL);
 
-    spi_config->mosi_io_num = -1;
-    spi_config->miso_io_num = -1;
-    spi_config->sclk_io_num = -1;
-    spi_config->quadwp_io_num = -1;
-    spi_config->quadhd_io_num = -1;
+    spi_config->mosi_io_num = GPIO_NUM_NC;
+    spi_config->miso_io_num = GPIO_NUM_NC;
+    spi_config->sclk_io_num = GPIO_NUM_NC;
+    spi_config->quadwp_io_num = GPIO_NUM_NC;
+    spi_config->quadhd_io_num = GPIO_NUM_NC;
 
     spi_device_interface_config->spics_io_num = -1;
 
