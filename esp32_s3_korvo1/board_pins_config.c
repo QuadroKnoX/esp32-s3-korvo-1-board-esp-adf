@@ -42,8 +42,8 @@ esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
         i2c_config->scl_io_num = GPIO_NUM_2;
         i2c_config->master.clk_speed = 600000;
     } else {
-        i2c_config->sda_io_num = -1;
-        i2c_config->scl_io_num = -1;
+        i2c_config->sda_io_num = GPIO_NUM_NC;
+        i2c_config->scl_io_num = GPIO_NUM_NC;
         ESP_LOGE(TAG, "i2c port %d is not supported", port);
         return ESP_FAIL;
     }
