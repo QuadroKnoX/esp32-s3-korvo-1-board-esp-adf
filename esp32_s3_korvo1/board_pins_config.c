@@ -85,7 +85,7 @@ esp_err_t get_spi_pins(spi_bus_config_t *spi_config, spi_device_interface_config
     spi_config->quadwp_io_num = GPIO_NUM_NC;
     spi_config->quadhd_io_num = GPIO_NUM_NC;
 
-    spi_device_interface_config->spics_io_num = -1;
+    spi_device_interface_config->spics_io_num = GPIO_NUM_NC;
 
     ESP_LOGW(TAG, "SPI interface is not supported");
     return ESP_OK;
